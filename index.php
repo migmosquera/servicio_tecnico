@@ -8,6 +8,8 @@
         <meta charset="utf-8">
         <meta name = "format-detection" content = "telefono venezuela arreglo celulares portatiles" />
         <link rel="stylesheet" href="static/css/grid.css">
+        <link rel="stylesheet" href="static/css/owl/owl.theme.css">
+        <link rel="stylesheet" href="static/css/owl/owl.carrousel.css">
         <link rel="stylesheet" href="static/css/stickUp/stickUp.css">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="stylesheet" href="//daneden.github.io/animate.css/animate.min.css">
@@ -17,34 +19,59 @@
 
         <?php include './templateGobal/header.php'; ?>
         <!--- Content-->
-        <section id="content">        
+        <section id="content">    
+            <div class="owl-carousel owl-theme">
+                <div class="bg-color-2  item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="grid_12 wow fadeInRight"  >
+                                <h2 class="font-color-1 center-object offset-1">We fix broken, damaged<br><span class="font-weight-light">cellular phones.</span></h2>
+                                <div class="custom-text-1">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Sed mauris erat, accumsan fermentum sit amet.</div>
+                                <div class="center-object">
+                                    <a href="#" class="btn-big">how it works</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="bg-color-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="grid_12 wow fadeInRight"  >
-                            <h2 class="font-color-1 center-object offset-1">We fix broken, damaged<br><span class="font-weight-light">cellular phones.</span></h2>
-                            <div class="custom-text-1">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Sed mauris erat, accumsan fermentum sit amet.</div>
-                            <div class="center-object">
-                                <a href="#" class="btn-big">how it works</a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="grid_12 wow fadeInLeft"  >
+                                <div class="page-head-box">
+                                    <img src="images/page1_img1.png" alt="" class="custom-img-1">
+                                    <img src="images/page1_img2.png" alt="" class="custom-img-2">
+                                    <img src="images/page1_img3.png" alt="" class="custom-img-3">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="bg-color-2 item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="grid_12 wow fadeInRight"  >
+                                <h2 class="font-color-1 center-object offset-1">Prueba<br><span class="font-weight-light">cellular phones.</span></h2>
+                                <div class="custom-text-1">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Sed mauris erat, accumsan fermentum sit amet.</div>
+                                <div class="center-object">
+                                    <a href="#" class="btn-big">how it works</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="grid_12 wow fadeInLeft"  >
-                            <div class="page-head-box">
-                                <img src="images/page1_img1.png" alt="" class="custom-img-1">
-                                <img src="images/page1_img2.png" alt="" class="custom-img-2">
-                                <img src="images/page1_img3.png" alt="" class="custom-img-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="grid_12 wow fadeInLeft"  >
+                                <!--<div class="page-head-box">
+                                    <img src="images/page1_img1.png" alt="" class="custom-img-1">
+                                    <img src="images/page1_img2.png" alt="" class="custom-img-2">
+                                    <img src="images/page1_img3.png" alt="" class="custom-img-3">
+                                </div>-->
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div>        
             <div class="bg-offset-1 bg-inset-2 bg-color-3">
                 <div class="container">
                     <div class="row">
@@ -131,6 +158,7 @@
 
 
         <script src="static/js/jquery.js"></script>
+        <script src="static/js/owl/owl.carrousel.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
         <script src="static/js/stickUp/stickUp.min.js"></script>
         <script src="static/js/global.js"></script>
