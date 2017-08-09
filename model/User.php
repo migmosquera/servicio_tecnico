@@ -5,7 +5,6 @@ require_once 'conexion/conexion.php';
 class User {
 
     private $id;
-    private $name;
     private $password;
     private $email;
     private $url_instagram;
@@ -33,10 +32,6 @@ class User {
 
     public function getId() {
         return $this -> id;
-    }
-
-    public function getName() {
-        return $this->name;
     }
 
     public function getPassword() {
@@ -95,10 +90,6 @@ class User {
         $this->id = $id;
     }
 
-    public function setName($name) {
-        $this->name = $name;
-    }
-
     public function setPassword($password) {
         $this->password = $password;
     }
@@ -151,9 +142,8 @@ class User {
         $this->id_instagram = $id_instagram;
     }
     
-    public function __construct($id="",$username="", $password="" ,$name="", $email="", $url_instagram="", $url_facebook="", $url_twitter="", $phone1="", $phone2="", $phone3="", $id_twitter="", $token_instagram="", $name_instagram="", $id_instagram="", $address="" ) {
+    public function __construct($id="",$username="", $password="" , $email="", $url_instagram="", $url_facebook="", $url_twitter="", $phone1="", $phone2="", $phone3="", $id_twitter="", $token_instagram="", $name_instagram="", $id_instagram="", $address="" ) {
         $this -> id = $id;
-        $this -> name = $name ;
         $this -> password = $password;
         $this -> email = $email;
         $this -> url_instagram = $url_instagram;
@@ -170,7 +160,7 @@ class User {
         $this -> address = $address;
     }
 
-    public function register() {
+    /*public function register() {
         $conectar = new Conectar();
 
         $query = $conectar->prepare('INSERT INTO ' . self::TABLA . ' (name, email, password, url_instagram, url_facebook, ) VALUES(:name, :email, :password, :url_instagram, :url_facebook, :phone)');
@@ -186,36 +176,8 @@ class User {
         $conectar = null;
     }
 
-    public function update($id, $name, $email, $photo, $facebook, $instagram, $username) {
-        $conectar = new Conectar();
+    
 
-        $query = $conectar->prepare('UPDATE users SET name = :name, email = :email, url_instagram = :url_instagram, url_facebook = :url_facebook, phone = :phone, username = :username WHERE id = :id');
-        $query->bindParam(':name', $name);
-        $query->bindParam(':email', $email);
-        $query->bindParam(':url_instagram', $instagram);
-        $query->bindParam(':url_facebook', $facebook);
-        $query->bindParam(':phone', $photo);
-        $query->bindParam(':username', $username);
-        $query->bindParam(':id', $id);
-        $query->execute();
-        return 'el usuario se a modificado';
-        $conectar = null;
-    }
-
-    public static function selectForId($id) {
-        $conectar = new Conectar();
-        $query = $conectar->prepare('SELECT * FROM ' . self::TABLA . ' WHERE id = :id');
-        $query->bindParam(':id', $id);
-        $query->execute();
-        $data = $query->fetch();
-
-        if ($data) {
-            return new self($data['name'], $data['email'], $data['password'], $data['url_instagram'], $data['url_facebook'], $data['phone'], $data['username'], $id);
-        } else {
-            return FALSE;
-        }
-        $conectar = null;
-    }
 
     public static function selectAll() {
         $conectar = new Conectar();
@@ -225,8 +187,45 @@ class User {
 
         return $data;
         $conectar = null;
-    }
+    }*/
+    
+    public function update($id, $email, $url_instagram, $url_facebook, $url_twitter, $phone1, $phone2, $phone3, $id_twitter, $token_instagram, $name_instagram, $id_instagram, $address ) {
+        $conectar = new Conectar();
 
+        $query = $conectar->prepare('UPDATE user SET email = :email, url_facebook = :url_facebook, url_twitter = :url_twitter, url_instagram = :url_instagram, phone1 = :phone1, phone2 = :phone2, phone3 = :phone3, id_twitter = :id_twitter, token_instagram = :token_instagram, name_instagram = :name_instagram, id_instagram = :id_instagram, address = :address WHERE id = :id');
+        $query->bindParam(':email', $email);
+        $query->bindParam(':url_facebook', $url_facebook);
+        $query->bindParam(':url_twitter', $url_twitter);
+        $query->bindParam(':url_instagram', $url_instagram);
+        $query->bindParam(':phone1', $phone1);
+        $query->bindParam(':phone2', $phone2);
+        $query->bindParam(':phone3', $phone3);
+        $query->bindParam(':id_twitter', $id_twitter);
+        $query->bindParam(':token_instagram', $token_instagram);
+        $query->bindParam(':name_instagram', $name_instagram);
+        $query->bindParam(':id_instagram', $id_instagram);
+        $query->bindParam(':address', $address);
+        $query->bindParam(':id', $id);
+        $query->execute();
+        return TRUE;
+        $conectar = null;
+    }
+    
+    public static function selectForId($id) {
+        $conectar = new Conectar();
+        $query = $conectar->prepare('SELECT * FROM ' . self::TABLA . ' WHERE id = :id');
+        $query->bindParam(':id', $id);
+        $query->execute();
+        $data = $query->fetch();
+        
+        if ($data) {
+            return new self($data['id'], $data['username'], $data['password'], $data['email'], $data['url_instagram'], $data['url_facebook'], $data['url_twitter'], $data['phone1'], $data['phone2'], $data['phone3'], $data['id_twitter'],$data['token_instagram'], $data['name_instagram'], $data['id_instagram'], $data['address']);
+        } else {
+            return FALSE;
+        }
+        $conectar = null;
+    }
+    
     public static function loginUser($username,$pass) {
         $conectar = new Conectar();
         $query = $conectar->prepare('SELECT * FROM ' . self::TABLA . ' WHERE username = :username AND password = md5(:pass)');

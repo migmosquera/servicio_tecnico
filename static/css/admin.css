@@ -1,0 +1,24 @@
+.container_form{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+}
+.sub_container_form{
+    width: 49%;
+    display: inline-block;
+}
+.input_form{
+    width: 320px;
+    height: 28px;
+    padding-left: 6px;
+}
+.textarea_form{
+    width: 320px;
+    height: 114px;
+    padding-left: 6px;
+}
+.container_input{
+    margin-bottom: 10px
+}

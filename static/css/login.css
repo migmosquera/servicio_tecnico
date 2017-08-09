@@ -12,7 +12,11 @@
     margin: 5px;
     vertical-align: middle;
 }
+.title_login{
+    color: #000000;
+    font-size: 25px;
 
+}
 .buttonRegister span {
   cursor: pointer;
   display: inline-block;

@@ -23,7 +23,7 @@ include_once './controller/loginUser.php';
                 <div class="modal-content sub_container_login" >
 
                     <form action="" method="post" name="loginUser" id="loginUser" accept-charset="utf-8" class="formLogin">
-                        <h2 style="color: #000000">Login</h2>
+                        <h2 class="title_login">Login</h2>
                         <div class="modal-body">
                             <p style="color: #000000; margin-bottom: 10px"><?php echo $user_login; ?></p>
                             <input type="text"required="required" id="username" name="username" class="input_login" placeholder="Usuario"/>	

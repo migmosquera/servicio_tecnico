@@ -18,7 +18,7 @@
                         <ul class="sf-menu">
                            
                             
-                            <li <?php if (substr($_SERVER['PHP_SELF'], 14) == 'index.php' ){ ?> class="current" <?php }?>><a href="index.php"><?php echo $home_navbar ?></a></li>
+                            <li <?php if (substr($_SERVER['PHP_SELF'], 18) == 'index.php' ){ ?> class="current" <?php }?>><a href="index.php"><?php echo $home_navbar ?></a></li>
                             <li ><a href="index-1.html">Services</a>
                                 <ul class="nav-arrow-1">
                                     <li><a href="#">Dolore ipsu</a></li>
@@ -32,7 +32,7 @@
                                     <li><a href="#">Elit Conseq</a></li>
                                 </ul>
                             </li>
-                            <li  <?php if (substr($_SERVER['PHP_SELF'], 14) == 'services.php' ){ ?> class="current" <?php }?>><a href="services.php">Iphone Repair</a></li>
+                            <li  <?php if (substr($_SERVER['PHP_SELF'], 18) == 'services.php' ){ ?> class="current" <?php }?>><a href="services.php">Iphone Repair</a></li>
                             <li><a href="index-3.html">Blog</a></li>
                             <li><a href="index-4.html">Contacts</a></li>
                         </ul>
