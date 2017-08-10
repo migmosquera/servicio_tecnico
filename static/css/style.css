@@ -723,6 +723,10 @@ background:#f25f43;
 color:#fff;
 }
 
+.thumb-image{
+    width: 215px;
+    height: 200px;
+}
 @media only screen and (max-width: 767px){
 .sf-menu {
 display:none;

@@ -5,6 +5,7 @@
     $error_login = 'Incorrect username or password';
     $exit = 'Exit';
     $event_navbar = 'Events';
+    $notice_navbar = 'News';
     $form_email = 'Enter Email';
     $form_phone1 = 'Enter Phone';
     $form_phone2 = 'Enter Phone';
@@ -21,5 +22,8 @@
     $save_user_msj = 'The user is modified';
     $title_admin_data = 'Enter the data to be used in the page';
     $title_admin_multimedia = 'Enter the videos and images they are going to show on the page';
-    $title_admin_imagenes = 'Images';
-    $title_admin_videos = 'Videos';
+    $title_img = 'Images';
+    $title_videos = 'Videos';
+    $title_admin_photo = "Photo title";
+    $form_upload_photo = "Upload photo";
+    $title_galery_img = "Photo gallery";

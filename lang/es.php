@@ -22,6 +22,9 @@
     $save_user_msj = 'El usuario ha sido modificado';
     $title_admin_data = 'Ingrese los datos a utilizar en la página';
     $title_admin_multimedia = 'Ingrese los vídeos e imágenes que van a mostrar en la página';
-    $title_admin_imagenes = 'Imágenes';
-    $title_admin_videos = 'Vídeos';
+    $title_img = 'Imágenes';
+    $title_videos = 'Vídeos';
+    $title_admin_photo = "título de la foto";
+    $form_upload_photo = "Subir foto";
+    $title_galery_img = "Galería de fotos";
 

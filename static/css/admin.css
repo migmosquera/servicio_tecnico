@@ -31,3 +31,11 @@
     margin: 0 auto;
     margin-top: 13px;
 }
+.imagenContainer{
+    height: 200px;
+    border: 1px solid #c4c4c4;
+    width: 215px;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 23px;
+}
