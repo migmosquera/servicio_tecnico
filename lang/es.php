@@ -20,4 +20,8 @@
     $form_id_instagram = 'Ingrese Id Instragram';
     $save_button = 'Guardar';
     $save_user_msj = 'El usuario ha sido modificado';
+    $title_admin_data = 'Ingrese los datos a utilizar en la página';
+    $title_admin_multimedia = 'Ingrese los vídeos e imágenes que van a mostrar en la página';
+    $title_admin_imagenes = 'Imágenes';
+    $title_admin_videos = 'Vídeos';
 

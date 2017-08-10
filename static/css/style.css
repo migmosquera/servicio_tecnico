@@ -307,7 +307,7 @@ margin-left:70px;
 margin-top:20px;
 }
 
-#content {
+.container_section {
 background:#fff;
 overflow:hidden;
 padding:0;

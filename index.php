@@ -19,7 +19,7 @@
 
         <?php include './templateGobal/header.php'; ?>
         <!--- Content-->
-        <section id="content">    
+        <section class="container_section">    
             <div class="owl-carousel owl-theme">
                 <div class="bg-color-2  item">
                     <div class="container">

@@ -29,7 +29,7 @@ require_once './controller/changeLanguaje.php';
 
         <?php include './templateGobal/header.php'; ?>
         
-        <section id="content">        
+        <section class="container_section">        
 
             <div class="bg-inset-6">
                 <div class="container">

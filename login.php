@@ -17,7 +17,7 @@ include_once './controller/loginUser.php';
 
 
         <!--- Content-->
-        <section id="content">    
+        <section class="container_section">    
             <article id="main" class="container_login">
 
                 <div class="modal-content sub_container_login" >

@@ -19,3 +19,7 @@
     $form_id_instagram = 'Enter Id Instagram';
     $save_button = 'Save';
     $save_user_msj = 'The user is modified';
+    $title_admin_data = 'Enter the data to be used in the page';
+    $title_admin_multimedia = 'Enter the videos and images they are going to show on the page';
+    $title_admin_imagenes = 'Images';
+    $title_admin_videos = 'Videos';
