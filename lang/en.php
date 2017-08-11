@@ -27,3 +27,4 @@
     $title_admin_photo = "Photo title";
     $form_upload_photo = "Upload photo";
     $title_galery_img = "Photo gallery";
+    $cancel_button = "Cancel";

@@ -66,6 +66,17 @@ class Photo {
         }
         $conectar = null;
     }
+    
+    public static function selectAll() {
+      $conectar = new Conectar();
+      $query = $conectar->prepare('SELECT * FROM ' . self::TABLA);
+      $query->execute();
+      $data = $query->fetchAll();
+
+      return $data;
+        $conectar = null;
+    
+    }
 
     /* public function register() {
       $conectar = new Conectar();

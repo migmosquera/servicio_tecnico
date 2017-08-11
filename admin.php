@@ -1,5 +1,6 @@
 <?php
 include_once './controller/searchUser.php';
+include_once './controller/countPhoto.php';
 include_once './controller/changeLanguaje.php';
 include_once './controller/saveUser.php';
 include_once './controller/savePhoto.php';
@@ -88,6 +89,7 @@ include_once './controller/savePhoto.php';
                         <h7 style="color: #2533A2;font-size: 18px;"><?php echo $form_upload_photo ?></h7>
                     </div>
                     <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="idPhoto" id="idPhoto" value=""/>
                         <div>
                             <div class="container_input">
                                 <input class="input_form" type="text" name="titlePhoto" id="titlePhoto" placeholder="<?php echo $title_admin_photo ?>" value="" />
@@ -96,17 +98,30 @@ include_once './controller/savePhoto.php';
                             <p id="imageContainer" class="imagenContainer" ></p>
                             <input type="file" name="loadImage" id="loadImage">
                         </div>
-                        <button type="submit" name="uploadImagen" id="uploadImagen" ><span><?php echo $save_button ?></span></button>
+                        <div>
+                            <p class="msj_edit"><?php echo $msjSavePhoto ?></p>
+                        </div>
+                        <div>
+                            <button type="submit" name="uploadImagen" id="uploadImagen" ><span><?php echo $save_button ?></span></button>
+                            <button type="button" name="cancelImagen" id="cancelImagen"><?php echo $cancel_button ?></button>
+                        </div>
+                        
                     </form>
                 </div>
                 <div class="sub_container_form">
                     <div class="container_title_data">
                         <h7 style="color: #2533A2;font-size: 18px;"><?php echo $title_galery_img ?></h7>
                     </div>
+                    <input type="hidden" name="countPagination" id="countPagination" value="<?php echo $count_image ?>"/>
+                    
+                    <div id="containerDataPhoto">
+                    </div>
+                    <p id="titleDelete" class="labe_hide" >Se a eliminado la imagen</p>
+                    <div class="container_pagination_right">
+                        <p id="paginationImage"></p>
+                    </div>
                 </div>
-                <div>
-                    <p class="msj_edit"><?php echo $msj_save_user ?></p>
-                </div>
+                
                 
             </div>    
         </section>
@@ -114,7 +129,9 @@ include_once './controller/savePhoto.php';
         <?php include './templateGobal/footer.php'; ?>
 
 
-        <script src="static/js/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.min.js"></script>
         <script src="static/js/global.js"></script>
         <script src="static/js/admin.js"></script>
     </body>

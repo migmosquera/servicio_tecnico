@@ -21,7 +21,7 @@
                             <li ><a href="">Multimedia</a></li>
                             <li><a href=""><?php echo $notice_navbar ?></a></li>
                             <li ><a href=""><?php echo $event_navbar ?></a></li>
-                            <li><a href=""><?php echo $exit;?></a></li>
+                            <li><a href="controller/logout.php"><?php echo $exit;?></a></li>
                         </ul>
                     </nav>
                 </div>

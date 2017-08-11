@@ -10,7 +10,7 @@ if (isset($_POST['uploadImagen'])) {
     $fileType = pathinfo($target_file, PATHINFO_EXTENSION);
     if ($fileType == 'jpg' or $fileType == 'png') {
         if (move_uploaded_file($_FILES['loadImage']['tmp_name'], $target_file)) {
-            $msjSavePhoto = "el titulo se ha guardado";
+            $msjSavePhoto = "La imagen se a guardado";
             $img_url = 'multimedia/' . basename($_FILES["loadImage"]["name"]);
             $photo_save = Photo::savePhoto($img_url, $namePhoto);
         } else {

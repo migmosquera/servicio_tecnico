@@ -22,14 +22,17 @@ function Global() {
             url: action,
             data: data,
             dataType: "json",
-            async: async == undefined ? true : false,
+            contentType: 'application/json',
             success: function (result) {
                 document.body.style.cursor = "default";
                 actionResult(result);
             },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            error: function (data, textStatus, errorThrown) {
                 document.body.style.cursor = "default";
-                alert(textStatus);
+                console.log(data);
+                console.log(textStatus);
+                console.log(errorThrown)
+                console.warn(data.responseText)
             }
         });
     };

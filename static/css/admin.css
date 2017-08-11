@@ -39,3 +39,37 @@
     padding: 0;
     margin-bottom: 23px;
 }
+.page-item{
+    width: 45px;
+    display: inline-block;
+    border: 1px solid #000000;
+    color: #000000;
+}
+.active{
+    background-color: #BBBBBB;
+}
+.container_list_data{
+    height: 60px;
+    border: 1px solid #000000;
+    vertical-align: middle;
+}
+.sub_container_list_data{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 0px;
+    line-height: initial;
+    color: #000000;
+}
+.container_list_img{
+    width: 16%;
+}
+.container_list_text{
+    width: 66%;
+}
+.container_list_button{
+    width: 8%;
+    cursor: pointer;
+}
+.label_hide{
+    display: none;
+}
